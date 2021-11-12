@@ -2,8 +2,6 @@
 import pytest
 from calculator.history.calc_history import History
 from calculator.calculations.addition import Addition
-from calculator.calculations.subtraction import Subtraction
-from calculator.calculations.multiplication import Multiplication
 from calculator.calculations.division import Division
 
 
