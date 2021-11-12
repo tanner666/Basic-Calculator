@@ -5,11 +5,11 @@ from calculator.calculations.calculation import Calculation
 
 
 class Subtraction(Calculation):
-    """This is the subtraction Class"""
+    """This is the subtraction class"""
 
     def get_result(self):
-        """get the subtraction results"""
-        subtraction_of_values = self.values[0] * 2
+        """gets the subtraction results"""
+        total = self.values[0] * 2
         for value in self.values:
-            subtraction_of_values = subtraction_of_values - value
-        return subtraction_of_values
+            total = total - value
+        return total

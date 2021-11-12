@@ -8,7 +8,7 @@ class Multiplication(Calculation):
     """This is the Multiplication Class"""
 
     def get_result(self):
-        """get the multiplication results"""
+        """gets the multiplication results"""
         total = 1.0
         for value in self.values:
             total = value * total
