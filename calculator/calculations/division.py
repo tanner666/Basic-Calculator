@@ -1,7 +1,7 @@
 """Division class"""
 
-
-from calculator.calculations.calculation import Calculation
+from calculator.calculations.calculation_factory \
+    import Calculation
 
 
 class Division(Calculation):
@@ -11,7 +11,8 @@ class Division(Calculation):
         """get the division results"""
         total = self.values[0] ** 2
         for value in self.values:
-            if self.values.index(value) != 0 and value == 0:
-                return "Divide By Zero Exception"
-            total = total / value
+            try:
+                total /= value
+            except ZeroDivisionError as error:
+                raise ZeroDivisionError from error
         return total

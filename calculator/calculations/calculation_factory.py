@@ -1,8 +1,8 @@
-"""General Calculation class"""
+"""Calculation Factory Class"""
 
 
 class Calculation:
-    """ abstract base class for the 4 calculations"""
+    """ 'abstract' base class for the 4 calculations"""
 
     # pylint: disable=too-few-public-methods
     def __init__(self, values: tuple):

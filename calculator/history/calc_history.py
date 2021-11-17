@@ -22,19 +22,9 @@ class History:
         return len(History.history)
 
     @staticmethod
-    def get_last_calculation():
-        """gets last calculation from history"""
-        return History.history[-1]
-
-    @staticmethod
     def get_last_calculation_value():
         """gets the value of the last calculation"""
-        return History.get_last_calculation().get_result()
-
-    @staticmethod
-    def get_first_calculation():
-        """gets the first calculation"""
-        return History.history[0]
+        return History.history[-1].get_result()
 
     @staticmethod
     def get_calculation(num):
@@ -62,7 +52,7 @@ class History:
     def add_multiplication_calculation(values):
         """Adds a multiplication object to history"""
         History.add_calculation(Multiplication.create(values))
-        return True
+        return History.get_last_calculation_value()
 
     @staticmethod
     def add_division_calculation(values):

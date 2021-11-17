@@ -9,7 +9,7 @@ class Calculator:
     # the calculator class calls methods from History class
     @staticmethod
     def get_result_value():
-        """ This is gets the value of the calculation"""
+        """ This gets the value of the calculation"""
         return History.get_last_calculation_value()
 
     @staticmethod

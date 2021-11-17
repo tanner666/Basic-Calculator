@@ -1,8 +1,6 @@
 """Testing the Calculator"""
 import pytest
 from calculator.history.calc_history import History
-from calculator.calculations.addition import Addition
-from calculator.calculations.division import Division
 
 
 @pytest.fixture
@@ -38,27 +36,14 @@ def test_count_history(clear_history_fixture, setup_addition_calculation_fixture
     assert History.count_history() == 4
 
 
-def test_get_last_calculation(clear_history_fixture, setup_addition_calculation_fixture):
-    """Testing getting the last calculation object from the history"""
-    # pylint: disable=unused-argument,redefined-outer-name
-    # This test if it returns the last calculation as an object
-    assert isinstance(History.get_last_calculation(), Division)
-
-
 def test_get_last_calculation_value(clear_history_fixture, setup_addition_calculation_fixture):
     """Testing getting the last calculation value from the history"""
     # pylint: disable=unused-argument,redefined-outer-name
     assert History.get_last_calculation_value() == 2
 
 
-def test_get_first_calculation(clear_history_fixture, setup_addition_calculation_fixture):
-    """Testing getting the first calculation object from the history"""
-    # pylint: disable=unused-argument,redefined-outer-name
-    assert isinstance(History.get_first_calculation(), Addition)
-
-
 def test_get_calculation(clear_history_fixture, setup_addition_calculation_fixture):
-    """Testing getting a specific calculation out of the history"""
+    """Testing getting a specific calculation object out of the history"""
     # pylint: disable=unused-argument,redefined-outer-name
     assert History.get_calculation(0).get_result() == 3
 

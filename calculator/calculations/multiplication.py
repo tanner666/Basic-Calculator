@@ -1,7 +1,7 @@
 """Multiplication class"""
 
-
-from calculator.calculations.calculation import Calculation
+from calculator.calculations.calculation_factory \
+    import Calculation
 
 
 class Multiplication(Calculation):
