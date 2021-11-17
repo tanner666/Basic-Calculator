@@ -11,3 +11,4 @@ branches:
   only:
     - main
     - devlopment
+    - version2
