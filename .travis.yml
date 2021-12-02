@@ -12,3 +12,4 @@ branches:
     - main
     - devlopment
     - version2
+    - pandas
