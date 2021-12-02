@@ -38,6 +38,8 @@ class CalculatorTest(unittest.TestCase):
 
         # test for zero division error
         my_tuple = (8, 0, 1)
-        with self.assertRaises(ZeroDivisionError):
-            Calculator.divide_numbers(my_tuple)
-            Calculator.get_result_value()
+        Calculator.divide_numbers(my_tuple)
+        self.assertEqual(Calculator.get_result_value(), "ZeroDivisionError")
+        # with self.assertRaises(ZeroDivisionError):
+        # Calculator.divide_numbers(my_tuple)
+        # Calculator.get_result_value()

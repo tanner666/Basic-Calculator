@@ -9,10 +9,10 @@ class Division(Calculation):
 
     def get_result(self):
         """get the division results"""
-        total = self.values[0] ** 2
-        for value in self.values:
+        total = self.values[0]
+        for value in self.values[1:]:
             try:
                 total /= value
-            except ZeroDivisionError as error:
-                raise ZeroDivisionError from error
+            except ZeroDivisionError:
+                return "ZeroDivisionError"
         return total
