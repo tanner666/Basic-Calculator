@@ -14,7 +14,7 @@ class CalculatorTestCSV(unittest.TestCase):
         data = FileReader.csv_in('CSV_Files/CSV_TestFiles/AdditionTest.csv')
         for data_set in data.itertuples():
             data = data_set[:-1]
-            Calculator.add_numbers(data)
+            Calculator.addition(data)
             self.assertEqual(Calculator.get_result_value(), data_set[-1])
 
     def test_calculator_subtract(self):
@@ -22,7 +22,7 @@ class CalculatorTestCSV(unittest.TestCase):
         data = FileReader.csv_in('CSV_Files/CSV_TestFiles/SubtractionTest.csv')
         for data_set in data.itertuples():
             data = data_set[:-1]
-            Calculator.subtract_numbers(data)
+            Calculator.subtraction(data)
             self.assertEqual(Calculator.get_result_value(), data_set[-1])
 
     def test_calculator_multiply(self):
@@ -30,7 +30,7 @@ class CalculatorTestCSV(unittest.TestCase):
         data = FileReader.csv_in('CSV_Files/CSV_TestFiles/MultiplicationTest.csv')
         for data_set in data.itertuples():
             data = data_set[:-1]
-            Calculator.multiply_numbers(data)
+            Calculator.multiplication(data)
             self.assertEqual(Calculator.get_result_value(), data_set[-1])
 
     def test_calculator_divide(self):
@@ -38,7 +38,7 @@ class CalculatorTestCSV(unittest.TestCase):
         data = FileReader.csv_in('CSV_Files/CSV_TestFiles/DivisionTest.csv')
         for data_set in data.itertuples():
             data = data_set[:-1]
-            Calculator.divide_numbers(data)
+            Calculator.division(data)
             if Calculator.get_result_value() == "ZeroDivisionError":
                 self.assertEqual(Calculator.get_result_value(), data_set[-1])
             else:

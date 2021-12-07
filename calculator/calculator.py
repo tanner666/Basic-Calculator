@@ -14,25 +14,25 @@ class Calculator:
 
     @staticmethod
     # tuple allows for passing in multiple values
-    def add_numbers(tuple_values: tuple):
+    def addition(tuple_values: tuple):
         """ calls history addition method to add values"""
         History.add_addition_calculation(tuple_values)
         return True
 
     @staticmethod
-    def subtract_numbers(tuple_values: tuple):
+    def subtraction(tuple_values: tuple):
         """ calls history subtraction method to subtract values"""
         History.add_subtraction_calculation(tuple_values)
         return True
 
     @staticmethod
-    def multiply_numbers(tuple_values: tuple):
+    def multiplication(tuple_values: tuple):
         """ calls history multiplication method to multiply values"""
         History.add_multiplication_calculation(tuple_values)
         return True
 
     @staticmethod
-    def divide_numbers(tuple_values: tuple):
+    def division(tuple_values: tuple):
         """ calls history division method to divide values"""
         History.add_division_calculation(tuple_values)
         return True

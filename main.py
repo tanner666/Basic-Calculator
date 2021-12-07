@@ -29,7 +29,7 @@ def add(file, data, array):
     """adds"""
     record_num = 1
     for data_set in data.itertuples():
-        Calculator.add_numbers(data_set)
+        Calculator.addition(data_set)
         array.append([time.time(), file, record_num, 'addition',
                       Calculator.get_result_value()])
         record_num += 1
@@ -40,7 +40,7 @@ def subtract(file, data, array):
     """subtracts"""
     record_num = 1
     for data_set in data.itertuples():
-        Calculator.subtract_numbers(data_set)
+        Calculator.subtraction(data_set)
         array.append([time.time(), file, record_num, 'subtraction',
                       Calculator.get_result_value()])
         record_num += 1
@@ -51,7 +51,7 @@ def multiply(file, data, array):
     """multiplies"""
     record_num = 1
     for data_set in data.itertuples():
-        Calculator.multiply_numbers(data_set)
+        Calculator.multiplication(data_set)
         array.append(
             [time.time(), file, record_num, 'multiplication',
              Calculator.get_result_value()])
@@ -63,7 +63,7 @@ def divide(file, data, array):
     """divides"""
     record_num = 1
     for data_set in data.itertuples():
-        Calculator.divide_numbers(data_set)
+        Calculator.division(data_set)
         if Calculator.get_result_value() == "ZeroDivisionError":
             log_exceptions(file, record_num)
             array.append([time.time(), file, record_num, 'division', Calculator.get_result_value()])
