@@ -10,9 +10,7 @@ USER myuser
 WORKDIR /home/myuser
 ENV PATH="/home/myuser/.local/bin:${PATH}"
 COPY app/templates/* ./
-COPY CSV_Files/CSV_InputFiles/* ./
-COPY CSV_Files/Results/* ./
-COPY CSV_Files/CSV_CompletedFiles ./
+COPY csv_manager/* ./
 COPY --chown=myuser:myuser . .
 RUN pip install -r requirements.txt
 CMD ["uwsgi", "app/app.ini"]

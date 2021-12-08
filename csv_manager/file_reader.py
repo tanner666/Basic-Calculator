@@ -9,8 +9,7 @@ class FileReader:
     @staticmethod
     def csv_in(file):
         """Imports a csv file into a dataframe"""
-        data_frame = pd.read_csv(file, header=None, index_col=0)
-        return data_frame
+        return pd.read_csv(file, header=None, index_col=0)
 
     @staticmethod
     def absolute_path(filepath):

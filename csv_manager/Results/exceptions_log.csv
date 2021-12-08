@@ -1,8 +1,13 @@
 Unix Time Stamp, File Name, Record Number, Type, Error
-
 1638395219.9926174,csv_test_files/DivisionTest.csv,6,division,Zero Division Error
 1638395219.997276,csv_test_files/DivisionTest.csv,9,division,Zero Division Error
 1638395608.1371644,csv_test_files/DivisionTest.csv,6,division,Zero Division Error
 1638395608.1431706,csv_test_files/DivisionTest.csv,9,division,Zero Division Error
 1638396942.012941,csv_test_files/DivisionTest.csv,6,division,Zero Division Error
 1638396942.017021,csv_test_files/DivisionTest.csv,9,division,Zero Division Error
+1638987938.4275289,DivisionTest.csv,1,division,Zero Division Error
+1638988078.587784,DivisionTest.csv,T,division,Zero Division Error
+1638988214.6564696,DivisionTest.csv,T,division,Zero Division Error
+1638989852.1206818,DivisionTest.csv,T,division,Zero Division Error
+1638990016.5795617,DivisionTest.csv,T,division,Zero Division Error
+1638990127.5790172,DivisionTest.csv,T,division,Zero Division Error
