@@ -1,5 +1,7 @@
+.idea
 .cache
 .local
 .pytest_cache
-.idea
 .ash_history
+__pycache__
+.coverage
