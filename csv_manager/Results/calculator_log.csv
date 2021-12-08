@@ -174,3 +174,7 @@ Unix Time Stamp, File Name, Record Number, Type, Result
 1638990127.5144494,LogTest.csv,1,addition,1
 1638991015.723037,csv_manager/CSV_TestFiles/CalculateTest.csv,1,division,5.0
 1638991015.8287933,LogTest.csv,1,addition,1
+1638992138.9887085,csv_manager/CSV_TestFiles/CalculateTest.csv,1,division,5.0
+1638992139.06935,LogTest.csv,1,addition,1
+1638992171.5155861,csv_manager/CSV_TestFiles/CalculateTest.csv,1,division,5.0
+1638992171.6182032,LogTest.csv,1,addition,1

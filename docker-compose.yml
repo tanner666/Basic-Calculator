@@ -7,20 +7,3 @@ services:
     #allows you to login to container
     volumes:
       - .:/home/myuser    #runs program under unprivelged user (for security)
-  flask:
-    build: .
-    restart: always
-    environment:
-      - APP_NAME=flask
-    expose:
-      - 8080
-    stdin_open: true # docker run -i
-    tty: true        # docker run -t
-    volumes:
-      - .:/home/myuser
-  nginx:
-    build: ./nginx
-    container_name: nginx
-    restart: always
-    ports:
-      - "80:80"

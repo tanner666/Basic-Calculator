@@ -13,4 +13,4 @@ COPY app/templates/* ./
 COPY csv_manager/* ./
 COPY --chown=myuser:myuser . .
 RUN pip install -r requirements.txt
-CMD ["uwsgi", "app/app.ini"]
+# CMD ["uwsgi", "app/app.ini"]
