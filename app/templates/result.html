@@ -7,7 +7,9 @@
     </style>
 {% endblock %}
 {% block content %}
-    <h1>Calculation Result</h1>
+    {% block header %}
+    <a class="navbar-text"><h2>Result</h2></a>
+    {% endblock %}
 
     <div class="container" style="min-height:100%; width:80%">
 	{% with messages = get_flashed_messages() %}
@@ -27,14 +29,27 @@
     <strong>Value 2: </strong> {{ value2 }} <br>
     <strong>Operation: </strong> {{ operation }} <br>
     <strong>Result: </strong> {{ result }}
-{% if data %}
-<table>
-{% for item in data %}
-<TR>
 
-</TR>
-{% endfor %}
-</table>
-{% endif %}
+    <table>
+        <TR>
+            <th>#</th>
+            <th>Operation</th>
+            <th>Value1</th>
+            <th>Value2</th>
+            <th>Result</th>
+        </TR>
+
+
+            {% for tuple in data %}
+                <tr>
+                {% for item in tuple %}
+                    <TH>{{item}}</TH>
+                {% endfor %}
+                </tr>
+            {% endfor %}
+
+
+
+    </table>
 
 {% endblock %}

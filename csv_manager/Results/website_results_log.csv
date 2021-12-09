@@ -1,0 +1,7 @@
+1,addition,1,2,3.0
+1,addition,1,2,3.0
+1,addition,2,2,4.0
+1,addition,2,2,4.0
+1,addition,1,2,3.0
+1,addition,1,2,3.0
+1,division,5,0,ZeroDivisionError

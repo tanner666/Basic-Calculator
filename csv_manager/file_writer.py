@@ -13,9 +13,8 @@ class FileWriter:
         """Prints results to the log file and moves file to completed folder"""
         # noinspection PyTypeChecker
         # pylint: disable=line-too-long
-        pd.DataFrame(array).to_csv(FileReader.absolute_path('csv_manager/Results/calculator_log.csv'),
+        pd.DataFrame(array).to_csv(FileReader.absolute_path('csv_manager/Results/' + file),
                                    mode='a', index=False, header=False)
-        FileWriter.move_to_completed(file)
 
     @staticmethod
     def move_to_completed(file):

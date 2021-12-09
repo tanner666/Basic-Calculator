@@ -18,7 +18,8 @@ def calculate(operation, file_name, data):
         array.append([time.time(), file_name, record_num, operation,
                       Calculator.get_result_value()])
         record_num += 1
-    FileWriter.log(array, file_name)
+    FileWriter.log(array, 'calculator_log.csv')
+    FileWriter.move_to_completed(file_name)
 
 
 def main():

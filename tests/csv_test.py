@@ -55,7 +55,7 @@ def test_log():
     array = [str(time.time()), filename, '1', 'addition', '1']
     array_final = []
     # Act
-    FileWriter.log([array], full_path)
+    FileWriter.log([array], 'calculator_log.csv')
     logs = FileReader.csv_in('csv_manager/Results/calculator_log.csv')
     for log in logs.itertuples():
         array_final.append(log)
