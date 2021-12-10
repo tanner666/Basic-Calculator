@@ -1,6 +1,7 @@
-# My Calculator Program- Flash Alerts
-<img width="960" alt="Screenshot 2021-12-07 173833" src="https://user-images.githubusercontent.com/90353188/145117133-002b7b73-6b11-4daf-b7fb-39afb12d09d9.png">
-<img width="960" alt="Screenshot 2021-12-07 173910" src="https://user-images.githubusercontent.com/90353188/145117143-0ff55a33-b419-435a-b44b-6800f46ca2b0.png">
+# My Calculator Program- Beautiful Tables (I just did the basic version)
+<img width="945" alt="Screenshot 2021-12-10 162600" src="https://user-images.githubusercontent.com/90353188/145643472-9cd9ef06-0430-4c06-b8d2-200b9fc9eeb9.png">
+<img width="943" alt="Screenshot 2021-12-10 162626" src="https://user-images.githubusercontent.com/90353188/145643485-12fb1774-d140-4cb6-bd0e-0f1e912409de.png">
+<img width="959" alt="Screenshot 2021-12-10 162710" src="https://user-images.githubusercontent.com/90353188/145643491-1b274e21-926e-49be-9b3e-58876634a65f.png">
 
 
 Old Travis Link:
