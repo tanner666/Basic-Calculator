@@ -2,20 +2,82 @@
 {% block title %}Home{% endblock %}
 {% block head %}
     {{ super() }}
-    <style type="text/css">
-        .important { color: #336699; }
-    </style>
-{% endblock %}
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python-Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-{% block header %}
-<a class="navbar-text"><h2>Home</h2></a>
+    <style>
+      .nounderline {
+          text-decoration: none !important;
+        }
+
+      .keyword {
+          color: #40413E;
+        }
+
+      kbd {
+          background-color: #D4D5D2;
+          color: black;
+        }
+
+  </style>
 {% endblock %}
 
 {% block content %}
+    <body>
+    <!-- Showcase -->
+    <section class="bg-dark text-light p-4 text-center text-sm-start">
+      <div class="container">
+          <div class="d-sm-flex align-items-center justify-content-between">
+              <div>
+                  <h2>My Website</h2>
+                </div>
+          </div>
+      </div>
+    </section>
+    <!-- Page -->
+    <section class="text-sm-start">
+      <div class="container">
+        <div class="d-sm-flex align-items-md-center">
+            <h2 class="py-2"><strong>Articles</strong></h2>
+        </div>
+        <div>
+            <p>This page contains four articles that will help explain Pylint, AAA Testing, Object Oriented Programming (OOP) Principles,
+                and SOLID Principles through a Python Calculator Program. <br>
+            </p>
+        </div>
+        <div>
+          <p>
+            Code snippits from the Calculator Program will be shown in the articles, but it is recommended to look over the full program
+            to see how it works.
+            <a href="https://github.com/tanner666/calc_ex/tree/Full-Calculator-code" target="_blank" class="nounderline">Click here for full program.</a><br>
+            A more condensed version of the code with only the core calculator classes can be
+            <a href="https://github.com/tanner666/calc_ex/tree/Tutorial-Calculator-Code" target="_blank" class="nounderline">found here.</a>
+          </p>
+        </div>
+        <div>
+            <h2 class="py-2"><strong>Calculator Program Overview</strong></h2>
+        </div>
+        <div>
+            <p>
+                At the top layer, the Calculator Class connects all the other classes. It has methods for all four calculations,
+                such as add_numbers, that call upon the corresponding History Class methods. The History Class has four specific methods for the calculations,
+                such as add_addition_calculation, which call upon a create method to instantiate the corresponding calculation object (like Addition), pass the object a tuple of
+                values, and then store the calculation object in a list. The calculation object is instantiated and setup by the calculation factory class.<br>
+                The Calculator Class can then ask for the result of that calculation, using the get_result_value() method, which
+                calls another History Class method to retrieve the result. This History Class method looks at the list of calculation objects,
+                calls upon the get_result() method of the corresponding calculation object (where the actual computation is performed),
+                 and retrieves and returns this result. <br>
 
-    <h1>Home</h1>
-    <p class="important">
-      Homepage of the century.
-        <img src="{{ url_for('static', filename='images/sample.jpeg') }}">
-    </p>
+              </p>
+        </div>
+
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  </body>
 {% endblock %}

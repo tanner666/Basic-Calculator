@@ -1,0 +1,255 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block head %}
+    {{ super() }}
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLID in calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+      .nounderline {
+          text-decoration: none !important;
+        }
+
+      .keyword {
+          color: #40413E;
+        }
+
+      kbd {
+          background-color: #D4D5D2;
+          color: black;
+        }
+
+
+  </style>
+
+  </head>
+{% endblock %}
+
+{% block content %}
+  <body>
+    <!-- Showcase -->
+    <section class="bg-dark text-light p-4 text-center text-sm-start">
+      <div class="container">
+          <div class="d-sm-flex align-items-center justify-content-between">
+              <div>
+                  <h2>SOLID Principles in the Calculator Program</h2>
+                </div>
+          </div>
+      </div>
+      
+    </section>
+    <!-- Definition -->
+    <section class="text-sm-start">
+      <div class="container">
+        <div class="d-sm-flex align-items-md-center">
+          <h2 class="py-2"><strong>What is SOLID?</strong></h2>          
+        </div>
+        <div>
+          <p>
+           SOLID stands for five object oriented design principles: <br>
+          </p>
+        </div>
+        <!--Single Responsibility Principle-->
+        <div class="d-sm-flex align-items-md-center">
+          <h4 class="py-2"><strong>1.) Single Responsibility Principle</strong></h4>          
+        </div>
+        <div>
+          <p>
+              A class should only have one responsibility or job. This simplifies programs and reduces dependency issues if you have to edit the code.
+          </p>
+        </div>
+        <!--Open/Closed Principle-->
+        <div class="d-sm-flex align-items-md-center">
+          <h4 class="py-2"><strong>2.) Open/Closed Principle</strong></h4>          
+        </div>
+        <div>
+          <p>
+              Software components (methods, classes, modules) should be open for extension, not modification. Program components 
+              should be designed so that new code can be added on without changing the existing code structure. For example, a base class can 
+              be used as a common interface to define subclasses, so that if you wanted to add a new method, you could simply create a new subclass by 
+              extending the base class. 
+            </p>
+        </div>
+        <!--Liskov Substitution Principle-->
+        <div class="d-sm-flex align-items-md-center">
+            <h4 class="py-2"><strong>3.) Liskov Substitution Principle</strong></h4>          
+          </div>
+          <div>
+            <p>
+                A subclass should be able to substitute for its base (parent) class without breaking the program. This means that any methods 
+                overridden in a subclass should still contain the same parameters as its base class. 
+              </p>
+          </div>
+        <!--Interface Segregation Principle-->
+        <div class="d-sm-flex align-items-md-center">
+            <h4 class="py-2"><strong>4.) Interface Segregation Principle</strong></h4>          
+          </div>
+          <div>
+            <p>
+               Subclasses shouldn't be forced to depend upon interfaces (methods) they don't use. This means that base classes should be 
+               as small as possible and only contain methods that all of their subclasses will use. Since a subclass inherits all of the methods 
+               from its base class, if the base class contains methods that cannot be used with a subclass, bugs can arise. 
+              </p>
+          </div>
+          <!--Dependency Inversion Principle-->
+        <div class="d-sm-flex align-items-md-center">
+            <h4 class="py-2"><strong>5.) Dependency Inversion Principle</strong></h4>          
+          </div>
+          <div>
+            <p>
+               Both high and low level classes/modules should depend on abstractions, not on other classes/modules. Abstractions also shouldn't 
+               depend on details, rather details should depend on abstractions. This means that one class shouldn't know the inner details of another 
+               class, much less depend on those details. If one class needs access to data within another class, it must use that other class's methods. 
+               In this way, a class can call upon another class's methods, but won't know what those methods actually do. <br>
+              </p>
+          </div>
+      </div>
+    </section>
+    <!--SOLID in calc-->
+    <section class="text-sm-start">
+        <div class="container">
+           <div class="d-sm-flex align-items-md-center">
+                <div>
+                    <h2 class="py-2"><strong><br>Solid Principles in the Calculator Program:</strong></h2>
+                  </div>
+                  
+            </div>
+            <div>
+                <p>
+                  Code for the calculator classes can be found 
+                  <a href="https://github.com/tanner666/calc_ex/tree/Tutorial-Calculator-Code" target="_blank" class="nounderline">here.</a>
+                </p>
+               
+              </div>
+            <div>
+                <h4><strong>Single Responsibility: </strong></h4> 
+            </div>
+            <style>
+                * {
+                  box-sizing: border-box;
+                }
+                
+                .column {
+                  float: left;
+                  width: 33.33%;
+                  padding: 5px;
+                }
+                
+                /* Clearfix (clear floats) */
+                .row::after {
+                  content: "";
+                  clear: both;
+                  display: table;
+                }
+                </style>
+            <div class="row">
+                <div class="column">
+                   
+                    <img src="https://raw.githubusercontent.com/tanner666/OOP/main/images/calculator_class_collapsed.png" width="350" height="">
+                </div>
+                <div class="column">
+                    
+                    <img src="https://raw.githubusercontent.com/tanner666/OOP/main/images/history_class_compressed.png" width="350" height="">
+              </div>
+              <div class="column">
+                    
+                <img src="https://raw.githubusercontent.com/tanner666/OOP/main/images/calculation_base_compressed.png" width="350" height="">
+                <br><br><br>
+                <img src="https://raw.githubusercontent.com/tanner666/OOP/main/images/addition_class_compressed.png" width="350" height="">
+                
+          </div>
+            </div>
+            <p>
+                Single Responsibility is demonstrated in every class of the Calculator program. The top layer Calculator class is responsible 
+                for calling the History class calculation methods and getting the values. The History class is responsible for creating and storing 
+                calculation objects in a list, and retrieving results from them. The calculation factory class is responsible for instantiating and setting up 
+                all of the calculation objects. The four calculation classes themselves are responsible for performing computations and returning the results. 
+                In this way, each class connects to another in a specific way to accomplish a single group of tasks. 
+            </p>
+            <div>
+                <h4><strong>Open/Closed: </strong></h4> 
+            </div>
+            <div>
+                <img src="https://raw.githubusercontent.com/tanner666/OOP/main/images/square_root%20class.png" width="350" height="">
+            </div>
+            <p>
+                The Open/Closed Principle is demonstrated in the calculation factory class, which serves as a base class for the calculation 
+                subclasses. Currently there are only four calculations (addition, subtraction, multiplication, and division) that the Calculator class, 
+                can use. If another one needed to be added, say a sqaure root calculation, you could simply create a new square root subclass that would 
+                extend the calculation base class, without having to modify the structure of the program. In this way, the O/C Principle is implemented.
+
+            </p>
+            <div>
+                <h4><strong>Liskov Substitution: </strong></h4> 
+            </div>
+            <div class="row">
+                <div class="column">
+                    <img src="https://raw.githubusercontent.com/tanner666/OOP/main/images/calculation_base_compressed.png" width="350" height="">
+                </div>
+                <div class="column">
+                    <img src="https://raw.githubusercontent.com/tanner666/OOP/main/images/addition_class_compressed.png" width="350" height="">
+                </div>
+            </div>
+            <p>
+                The Liskov Substitution Principle isn't extremely prevelant in this program, but it can still be seen in the calculation base class. 
+                Usually this principle deals with the ability to substitute a subclass, which has overridden methods from the base class, with the bass class, but there is no method 
+                overridding in this Calculator program. The fact that the calculation subclasses don't override any of the methods from their base class 
+                automatically means that they could be substituted with their base class without breaking the code. In this way the Liskov Substitution Principle is shown.
+            </p>
+            <div>
+                <h4><strong>Interface Segregation: </strong></h4> 
+            </div>
+            <div>
+                <img src="https://raw.githubusercontent.com/tanner666/OOP/main/images/Caculation%20Factory%20Calss.png" width="400" height="">
+            </div>
+            <p>
+                The Interface Segregation Principle is again demonstrated in the calculation base class. This base class only contains a constructor, 
+                a create method, and a convert_args_to_tuple_float_values method, all of which are utilized by all four of the calculation subclasses. 
+                The create method is a class method, which instantiates the calculation objects using the constructor, and the constructor 
+                uses the convert method to convert all values in the input tuple to floats. Since the create method uses the constructor and all other base class methods, and  
+                all of the calculation subclasses use the create method, the calculation subclasses aren't dependent on any inherited methods they don't use. So 
+                the Interface Segregation Principle is upheld. 
+            </p>
+            <div>
+                <h4><strong>Dependency Inversion: </strong></h4> 
+            </div>
+            <div class="row">
+                <div class="column">
+                   
+                    <img src="https://raw.githubusercontent.com/tanner666/OOP/main/images/calculator_get_method.png" width="350" height="">
+                </div>
+                <div class="column">
+                    
+                    <img src="https://raw.githubusercontent.com/tanner666/OOP/main/images/history_get_result_value.png" width="350" height="">
+              </div>
+              <div class="column">
+                    
+                <img src="https://raw.githubusercontent.com/tanner666/OOP/main/images/AdditionClass.png" width="350" height="">
+                
+                
+          </div>
+            </div>
+            <p>
+                Dependency Inversion is demonstrated by every class in the Calculator program, in that no class can directly access the 
+                inner workings of another class. Looking at the top layer Calculator class, the get_result_value() method returns the value 
+                of a calculation performed. This method needs to retrieve the value from the list of calculation objects in the History class, but it can't 
+                access this data directly. So 
+                the get_result_value() method calls upon the History class method: get_last_calculation_value() to retrieve the value from inside the History class. 
+                The History class actually only has access to the calculation object stored within the history list and not the value itself, so the get_last_calculation_value() 
+                method must call upon the calculation object's get_result() method to retrieve the value from within the calculation class. In this way, 
+                none of the classes, high or low level, can directly retrieve data from inside one another, and must instead call upon internal methods. 
+            </p>
+            <br><br><br>
+        </div>
+      </section>
+
+     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+  </body>
+{% endblock %}

@@ -16,3 +16,8 @@ class FileReader:
         """Returns the absolute path of a file"""
         relative = Path(filepath)
         return relative.absolute()
+
+    @staticmethod
+    def log_line_counter(file):
+        dataframe = pd.read_csv(file, header=None, index_col=0)
+        return len(dataframe.index)

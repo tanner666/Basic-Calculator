@@ -27,17 +27,25 @@
 <body>
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
       <div class="container">
-          <div id="header">{% block header %}{% endblock %}</div>
+          <div id="header">
+              <a href="/" class="navbar-brand">Homepage</a>
+          </div>
           <div class="collapse navbar-collapse" id="navmenu">
               <ul class="navbar-nav ms-auto">
-                <li>
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
                   <li class="nav-item">
                     <a class="nav-link" href="/calculator">Calculator</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">WTF Form for flask (To Be Added)</a>
+                    <a class="nav-link" href="/results">Result Log</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/subpage1">OOP</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/subpage2">SOLID</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/subpage3">Tips</a>
                   </li>
               </ul>
           </div>
@@ -55,10 +63,18 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 
-<div id="footer">
+<style>
+    .footer{
+        text-align: center;
+    }
+</style>
+
+<div class="footer" id="footer">
+    <br>
     {% block footer %}
         Tanner Guld - IS218 Project
     {% endblock %}
+    <br><br>
 </div>
 
 </body>

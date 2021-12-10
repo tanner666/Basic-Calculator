@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block head %}
+    {{ super() }}
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP in Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+      .nounderline {
+          text-decoration: none !important;
+        }
+
+      .keyword {
+          color: #40413E;
+        }
+
+      kbd {
+          background-color: #D4D5D2;
+          color: black;
+        }
+                * {
+                  box-sizing: border-box;
+                }
+                
+                .column {
+                  float: left;
+                  width: 33.33%;
+                  padding: 5px;
+                }
+                
+                /* Clearfix (clear floats) */
+                .row::after {
+                  content: "";
+                  clear: both;
+                  display: table;
+                }
+
+  </style>
+
+  </head>
+{% endblock %}}
+{% block content %}
+  <body>
+    <!-- Showcase -->
+    <section class="bg-dark text-light p-4 text-center text-sm-start">
+      <div class="container">
+          <div class="d-sm-flex align-items-center justify-content-between">
+              <div>
+                  <h2>OOP Principles in the Calculator Program</h2>
+                </div>
+          </div>
+      </div>
+    </section>
+    <!-- Definition -->
+    <section class="text-sm-start">
+      <div class="container">
+        <div class="d-sm-flex align-items-md-center">
+          <h2 class="py-2"><strong>What is OOP?</strong></h2>          
+        </div>
+        <div>
+          OOP stands for Object Oriented Programming. It is a software design model that structures a program around objects or data.
+        </div>
+        <div class="d-sm-flex align-items-md-center">
+          <h2 class="py-2"><strong>Four Principles of OOP</strong></h2>          
+        </div>
+        <div>
+          <h4 class="py-2"><strong>1.) Encapsulation: </strong></h4> 
+          <p>
+            The wrapping of data and methods in one location to put restrictions on what variables and methods can be 
+            accessed directly. This prevents the accidental modification of variables/methods by only allowing the programmer to access 
+            things on a need to know basis. 
+          </p>
+          <h4 class="py-2"><strong>2.) Inheritance: </strong></h4>
+          <p>
+            The ability to inherit or assume the properties of a class. This allows for code to be reused across multiple 
+            classes, by having each of those classes inherit a parent class that contains the common methods or variables.
+          </p>
+          <h4 class="py-2"><strong>3.) Polymorphism: </strong></h4>  
+          <p>
+            It literally means the ability to have many forms. It is most commonly seen in method overloading, where a method 
+            can be defined multiple times with different input parameters, and in method overriding, where a method in a child class can override 
+            the same method from the parent class.
+          </p>  
+          <h4 class="py-2"><strong>4.) Abstraction: </strong></h4>
+          <p>
+            This deals with abstract classes and the concept of hiding data. Just like classes are blueprints for objects, 
+            abstract classes are blueprints for other classes. Abstract classes contain abstract methods, which are essentially empty methods with just 
+            only a declaration, and any classes that inherit the abstract class inherit all of these abstract methods. The abstract methods must  
+            then be defined in each subclass. In this way, you can create a common template for classes that need the same methods, but with different 
+            implementations. This also provides a fixed structure for the subclasses so that they must implement all the abstract methods. 
+          </p>
+        </div>
+        <!-- OOP Principles in a Calculator Program -->
+        <div class="d-sm-flex align-items-md-center">
+          <h2 class="py-2"><strong>OOP Principles in the Calculator Program</strong></h2>    
+        </div>
+        <div>
+          <p>
+            Code for the calculator classes can be found 
+            <a href="https://github.com/tanner666/calc_ex/tree/Tutorial-Calculator-Code" target="_blank" class="nounderline">here.</a>
+          </p>
+         
+        </div>
+        
+        <div>
+          <h4><strong>Calculation Classes:</strong></h4> 
+        </div>
+          <div class="row">
+            <div class="column">
+               
+                <img src="https://raw.githubusercontent.com/tanner666/OOP/main/images/Caculation%20Factory%20Calss.png" width="400" height="">
+            </div>
+            <div class="column">
+                
+                <img src="https://raw.githubusercontent.com/tanner666/OOP/main/images/AdditionClass.png" width="350" height="">
+          </div>
+          </div>
+        
+        <div class="row">
+          <div class="column">
+                
+            <img src="https://raw.githubusercontent.com/tanner666/OOP/main/images/SubtractionClass.png" width="350" height="">
+          </div>
+          <div class="column">
+            <img src="https://raw.githubusercontent.com/tanner666/OOP/main/images/MultiplicationClass.png" width="350" height="">
+          </div>
+          <div class="column">
+            <img src="https://raw.githubusercontent.com/tanner666/OOP/main/images/division_class.png" width="350" height="">
+          </div>
+        </div>
+          
+        <div>
+          <p>
+            <kbd>1/2.) Abstraction and Interitance:</kbd> The Calculation Factory Class is a base class for the four calculation classes (addition, subtraction, multiplication, division). Although it 
+              doesn't contain any abstract methods, The Calculation Factory Class acts similar to an abstract class in that it acts as a blueprint for 
+              the four calculation classes (addition, subtraction, multiplication, and division), providing methods those classes all inherit. 
+              Each calculation class, inherits the methods of the Calculation Factory Class, allowing all 
+              four of them to have the same methods, but for the methods to only be defined at one point in the program. The base class allows for code 
+              reusability, while also hiding what the each of its methods do from the individual calculation classes. So the 4 calculation classes can 
+              use the methods from the base class, but don't know what they do. <br>
+              <kbd>3.) Encapsulation:</kbd> Encapsulation is also demonstrated here in the four calculation classes. Take 
+              the addition class for example. The addition class encapsulates (or houses) its unique get_result() method, as well as the inherited ones. 
+              Information within the addition class cannot be accessed directly from outside of the class, but can only be accessed through these 
+              methods, specifically the get_result() method. <br>
+              <kbd>4.) Polymorphism:</kbd> Finally, polymorphism is also demonstrated in the four calculation classes in their different get_result() methods. Polymorphism refers to having 
+              many forms, and the get_result() method takes on a different form with the same name in each of the four calculation classes. The point of this is to organize the program, 
+              so that when any of the four calculation classes are instantiated, the result will always be returned through a method of the same name.
+          </p>
+        </div>
+        <div>
+          <h4><strong>Rest of the Program:</strong></h4> 
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="https://raw.githubusercontent.com/tanner666/OOP/main/images/calculator_class_collapsed.png" width="350" height="">
+          </div>
+          <div class="column">
+            <img src="https://raw.githubusercontent.com/tanner666/OOP/main/images/history_class_compressed.png" width="350" height="">
+          </div>
+        </div>
+        <p>
+          <kbd>Encapsulation</kbd> is demonstrated in the rest of the classes in the program as well, as each class encapsulates the methods and data 
+          within it. The Calculation class shown above encapsulates its five methods. The History class also encapsulates all of its methods 
+          as well as the history[] list. This means that the Calculation class methods cannot directly access the history list, since the history list 
+          is encapsulated within the History Class. The only way for the Calculation class to access the history list is through History Class methods.
+          <br><br><br><br>
+        </p>
+
+      </div>
+    </section>
+     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+  </body>
+{% endblock %}

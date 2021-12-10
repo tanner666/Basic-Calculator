@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block head %}
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pylint Tips and Tricks</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+      .nounderline {
+          text-decoration: none !important;
+        }
+
+      .keyword {
+          color: #40413E;
+        }
+
+      kbd {
+          background-color: #D4D5D2;
+          color: black;
+        }
+
+
+  </style>
+
+  </head>
+{% endblock %}
+
+{% block content %}
+  <body>
+    <!-- Showcase -->
+    <section class="bg-dark text-light p-4 text-center text-sm-start">
+      <div class="container">
+          <div class="d-sm-flex align-items-center justify-content-between">
+              <div>
+                  <h2>Pylint Tips and Tricks</h2>
+                </div>
+          </div>
+      </div>
+    </section>
+    <!-- Definition -->
+    <section class="text-sm-start">
+      <div class="container">
+        <div class="d-sm-flex align-items-md-center">
+          <h2 class="py-2"><strong>What is Pylint?</strong></h2>          
+        </div>
+        <div>
+          <p>
+            Simply put, Pylint is a tool that tests the quality or style of a Python program according to PEP 8 standards (styling standards). 
+            Linting can be performed on a program via the command line, using "pylint program.py", or directly in an IDE by importing pylint. 
+            For larger projects with mutliple testing tools, pylint will often be included in a requirements.py file.  
+            <a href="https://pylint.org/" target="_blank" class="nounderline">Click here for more informationon Pylint.</a>. 
+          </p>
+        </div>
+        <div class="d-sm-flex align-items-md-center">
+          <h2 class="py-2"><strong>Why is Pylint important?</strong></h2>          
+        </div>
+        <p>
+         Pylint helps enforce good coding practices, checks a program for bugs or errors, and makes code more readable and professional looking.
+        </p>
+        <div class="d-sm-flex align-items-md-center">
+          <h2 class="py-2"><strong>Pylint Tips and Tricks: </strong></h2>          
+        </div>
+        <p>
+          First, always include docstrings in your classes. You will need one module docstring as the first 
+          line of every python file, a class docstring following a class header, and a method/function docstring after every method/function 
+          header. Second, line spacing is important. There should be two lines between an import statement and a class header, two lines between 
+          instance methods, one line between static methods, and one empty trailing line left at the end of every python file. Third, class names
+          should be in CamelCase and not include underscores. Fourth, always make sure all methods or variables are being used. Any unused 
+          statements will throw a pylint error.
+          One last helpful tip is that specific pylint errors can be ignored using '# pylint: disable=error_name'.
+        </p>
+        <!-- Glossary -->
+        <div class="d-sm-flex align-items-md-center">
+          <h2 class="py-2"><strong>Glossary: OOP Terms</strong></h2>          
+        </div>
+        <div>
+          <ul>
+            <li>
+                <kbd>Class</kbd>: Classes act as blueprints for objects, housing constructors, methods, and variables. 
+              </li>
+            <li>
+                <kbd>Class method</kbd>: Class methods are methods bound to a class (not an object). They take a class parameter, which allows them to 
+                access and modify the state of the class. These are commonly used to create factory methods, which essentially create class 
+                objects.
+            </li>
+            <li>
+                <kbd>Constructor</kbd>: Constructors are a part of classes used to initialize variables and specify object parameters. 
+                They are used outside the class to instatiate objects. 
+            </li>
+            <li>
+                <kbd>Design Patterns</kbd>: Design Patterns are a crucial part of software development, as they allow programs to be readable 
+                and efficient. They refer to the best practices used in writing software, or rather, templates for how to solve problems.
+            </li>
+            <li>
+                <kbd>Facade</kbd>: Facade referes to a shell or an outer layer that houses and connects all the inner layers. It is a design pattern 
+                that allows one outer class or method to connect all the inner classes and methods. 
+            </li>
+            <li>
+              <kbd>Factory</kbd>: Factory methods are design patterns that are used to create class objects. They are used so that all of the class 
+              objects are instantiated in the same place.
+            </li>
+            <li>
+                <kbd>Fixture</kbd>: Fixtures are used in testing files to initialize test functions, so that the tests can run reliably and consitently.
+              </li>
+            <li>
+              <kbd>Instantiation</kbd>: Instantiation refers to the creation of a class object, where all the methods and variables in the class 
+              are inherited by the object.
+            </li>
+            <li>
+                <kbd>Methods</kbd>: Methods (or functions) are reusable chunks of code created to fulfill specific tasks.
+            </li>
+            <li>
+                <kbd>Method Signature</kbd>: Method, or function, signatures specify the parameters of a method.
+            </li>
+            <li>
+                <kbd>Namespace</kbd>: A Namespace is essentially a dictionary that contains a collection of names and the objects those names refer to.
+            </li>
+            <li>
+              <kbd>Object</kbd>: An object is an instance of a class, or more generally, a value stored in memory.
+            </li>
+            <li>
+                <kbd>Property</kbd>: Properties refer to getter and setter methods, which are built into languages such as Python, that allow for 
+                accessing and manipulating data. Properties can also refer to the characteristics of methods or classes or variables, such as static 
+                or instance. 
+            </li>
+            <li>
+                <kbd>Static</kbd>: Static methods are methods bound to a class. Unlike class methods, however, they do not take a class parameter, meaning 
+                that they cannot access or modify the class state. Static variables are class variables that exist only in a single copy. 
+            </li>
+            <li>
+                <kbd>Type cast</kbd>: Casting refers to the conversion of a variable from one type to another. 
+            </li>
+            <li>
+                <kbd>Type hint</kbd>: Type hinting refers to indicating the type of a value in Python code.
+            </li>
+            <li>
+                <kbd>Unit Test</kbd>: Unit testing refers to the testing of code in the development process to identify bugs and errors early on. Unit 
+                Tests usually consist of test methods to test if all methods in a program produce the desired result.
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </section>
+     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+  </body>
+{% endblock %}

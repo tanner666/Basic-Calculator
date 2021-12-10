@@ -75,3 +75,9 @@ def test_exceptions_log():
         array_final.append(log)
     # Assert
     assert array_final[-1][2] == 'T'
+
+def test_log_line_counter():
+    """testing a function that returns the number of lines in a csv file"""
+    file = 'csv_manager/CSV_TestFiles/AdditionTest.csv'
+    lines = FileReader.log_line_counter(file)
+    assert lines == 8
