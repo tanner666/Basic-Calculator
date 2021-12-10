@@ -33,33 +33,52 @@
 	{% block body %}{% endblock %}
     </div>
 
-    <strong>Value 1: </strong> {{ value1 }} <br>
-    <strong>Value 2: </strong> {{ value2 }} <br>
-    <strong>Operation: </strong> {{ operation }} <br>
-    <strong>Result: </strong> {{ result }}
+    <section class="text-sm-start" style="margin-left:auto; margin-right:auto;width:90%">
+        <strong>Value 1: </strong> {{ value1 }} <br>
+        <strong>Value 2: </strong> {{ value2 }} <br>
+        <strong>Operation: </strong> {{ operation }} <br>
+        <strong>Result: </strong> {{ result }}
+        <br><br>
+    </section>
 
-    <table class="table">
-        <thead class="thread-dark">
-            <TR>
-                <th scope="col">#</th>
-                <th scope="col">Operation</th>
-                <th scope="col">Value1</th>
-                <th scope="col">Value2</th>
-                <th scope="col">Result</th>
-            </TR>
-        </thead>
-        <tbody>
+    <section style="margin-left:auto; margin-right:auto;width:90%">
+        <table id="data" class="table table-striped" style="border:1px solid black;">
+            <thead class="thread-dark">
+                <TR>
+                    <th scope="col">#</th>
+                    <th scope="col">Operation</th>
+                    <th scope="col">Value1</th>
+                    <th scope="col">Value2</th>
+                    <th scope="col">Result</th>
+                </TR>
+            </thead>
+            <tbody>
 
-            {% for tuple in data %}
-                <tr>
-                {% for item in tuple %}
-                    <td>{{item}}</td>
+                {% for tuple in data %}
+                    <tr>
+                    {% for item in tuple %}
+                        <td>{{item}}</td>
+                    {% endfor %}
+                    </tr>
                 {% endfor %}
-                </tr>
-            {% endfor %}
-        </tbody>
+            </tbody>
+        </table>
 
-    </table>
+        {% block scripts %}
+            <script>
+            $(document).ready(function () {
+              $('#data').DataTable({
+                  columns: [
+                      null,
+                      {searchable: false},
+                      {orderable: false, searchable: false},
+                      {orderable: false, searchable: false},
+                      null],
+              });
+            });
+          </script>
+        {% endblock %}
+    </section>
 </body>
 
 {% endblock %}

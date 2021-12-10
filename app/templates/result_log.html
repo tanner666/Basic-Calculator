@@ -24,28 +24,45 @@
 	{% block body %}{% endblock %}
     </div>
     
-    <table class="table">
-        <thead class="thread-dark">
-            <TR>
-                <th scope="col">#</th>
-                <th scope="col">Operation</th>
-                <th scope="col">Value1</th>
-                <th scope="col">Value2</th>
-                <th scope="col">Result</th>
-            </TR>
-        </thead>
-        <tbody>
+    <section style="margin-left:auto; margin-right:auto;width:90%">
+        <br><br>
+        <table id="data" class="table table-striped" style="border:1px solid black;">
+            <thead class="thread-dark">
+                <TR>
+                    <th scope="col">#</th>
+                    <th scope="col">Operation</th>
+                    <th scope="col">Value1</th>
+                    <th scope="col">Value2</th>
+                    <th scope="col">Result</th>
+                </TR>
+            </thead>
+            <tbody>
 
-            {% for tuple in data %}
-                <tr>
-                {% for item in tuple %}
-                    <td>{{item}}</td>
+                {% for tuple in data %}
+                    <tr>
+                    {% for item in tuple %}
+                        <td>{{item}}</td>
+                    {% endfor %}
+                    </tr>
                 {% endfor %}
-                </tr>
-            {% endfor %}
-        </tbody>
+            </tbody>
+        </table>
 
-    </table>
+        {% block scripts %}
+            <script>
+            $(document).ready(function () {
+              $('#data').DataTable({
+                  columns: [
+                      null,
+                      null,
+                      {orderable: false, searchable: false},
+                      {orderable: false, searchable: false},
+                      null],
+              });
+            });
+          </script>
+        {% endblock %}
+    </section>
 </body>
 
 {% endblock %}

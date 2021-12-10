@@ -1,8 +1,9 @@
 """A simple flask web app (This connects the pages)"""
-from flask import Flask, flash
+from flask import Flask, flash, render_template
 from app.controllers.index_controller import IndexController
 from app.controllers.calculator_controller import CalculatorController
 from app.controllers.subpage_controller import SubpageController
+from csv_manager.file_reader import FileReader
 
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
@@ -34,5 +35,3 @@ def tips_get():
 @app.route("/results", methods=['GET'])
 def results_get():
     return SubpageController.get_results()
-
-
