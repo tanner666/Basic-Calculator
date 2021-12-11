@@ -17,6 +17,15 @@ class History:
         return True
 
     @staticmethod
+    def get_info():
+        """returns the operation, values, and result of calculation object"""
+        calc_obj = History.get_calculation(-1)
+        data = []
+        name = calc_obj.__class__.__name__
+        value1 = 1
+
+
+    @staticmethod
     def count_history():
         """gets the number calculations stored in history"""
         return len(History.history)

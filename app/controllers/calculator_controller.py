@@ -11,16 +11,24 @@ class CalculatorController(ControllerBase):
     """Post and get method"""
     @staticmethod
     def post():
+        value1 = request.form['value1']
+        value2 = request.form['value2']
 
-        if request.form['value1'] == '' or request.form['value2'] == '':
+        valid_values = True
+        try:
+            float(value1) and float(value2)
+        except ValueError:
+            valid_values = False
+
+        if value1 == '' or value2 == '':
             error = 'You must enter a value for value 1 and or value 2!'
+        elif not valid_values:
+            error = 'You must enter valid values!'
         else:
             flash('Calculation successful!')
             # flash('You are awesome')
 
             # get the values out of the form
-            value1 = request.form['value1']
-            value2 = request.form['value2']
             operation = request.form['operation']
             # make the tuple
             my_tuple = (value1, value2)
@@ -28,7 +36,8 @@ class CalculatorController(ControllerBase):
             getattr(Calculator, operation)(my_tuple)
             result = str(Calculator.get_result_value())
 
-            FileWriter.log([[History.count_history(), operation, value1, value2, result]], 'website_results_log.csv')
+            FileWriter.log([[FileReader.log_line_counter('csv_manager/Results/website_results_log.csv')+1,
+                             operation, value1, value2, result]], 'website_results_log.csv')
             data = FileReader.csv_in('csv_manager/Results/website_results_log.csv')
             data_array = []
             for data_set in data.itertuples():
