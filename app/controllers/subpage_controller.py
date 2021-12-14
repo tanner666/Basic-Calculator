@@ -1,12 +1,12 @@
 """Get method for subpages"""
-
-from app.controllers.controller import ControllerBase
 from flask import render_template
+from controller import ControllerBase
 from csv_manager.file_reader import FileReader
-from calculator.history.calc_history import History
 
 
+# pylint: disable=missing-function-docstring
 class SubpageController(ControllerBase):
+    """controller class for all subpages"""
     @staticmethod
     def get_oop():
         return render_template('OOP_in_calc.html')
@@ -31,5 +31,3 @@ class SubpageController(ControllerBase):
             data_array.append(data_set)
 
         return render_template('result_log.html', data=data_array)
-
-

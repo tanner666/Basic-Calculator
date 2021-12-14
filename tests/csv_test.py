@@ -51,7 +51,6 @@ def test_log():
     """testing log function (writes results in log file)"""
     # Arrange
     filename = 'LogTest.csv'
-    full_path = 'csv_manager/CSV_TestFiles' + '/' + filename
     array = [str(time.time()), filename, '1', 'addition', '1']
     array_final = []
     # Act
@@ -76,8 +75,9 @@ def test_exceptions_log():
     # Assert
     assert array_final[-1][2] == 'T'
 
+
 def test_log_line_counter():
     """testing a function that returns the number of lines in a csv file"""
     file = 'csv_manager/CSV_TestFiles/AdditionTest.csv'
-    lines = FileReader.log_line_counter(file)
+    lines = FileReader.line_counter(file)
     assert lines == 8

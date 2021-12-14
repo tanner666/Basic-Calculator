@@ -18,6 +18,7 @@ class FileReader:
         return relative.absolute()
 
     @staticmethod
-    def log_line_counter(file):
+    def line_counter(file):
+        """Returns the number of rows in a csv file"""
         dataframe = pd.read_csv(file, header=None, index_col=0)
         return len(dataframe.index)

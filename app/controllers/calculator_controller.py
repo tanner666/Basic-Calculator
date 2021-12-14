@@ -1,14 +1,15 @@
 """Defines what the post and get method do"""
+from controller import ControllerBase
+from flask import render_template, request, flash
 from csv_manager.file_writer import FileWriter
 from csv_manager.file_reader import FileReader
-from app.controllers.controller import ControllerBase
 from calculator.calculator import Calculator
 from calculator.history.calc_history import History
-from flask import render_template, request, flash, redirect, url_for
 
 
 class CalculatorController(ControllerBase):
     """Post and get method"""
+    # pylint: disable=missing-function-docstring
     @staticmethod
     def post():
         value1 = request.form['value1']
@@ -36,8 +37,14 @@ class CalculatorController(ControllerBase):
             getattr(Calculator, operation)(my_tuple)
             result = str(Calculator.get_result_value())
 
-            FileWriter.log([[FileReader.log_line_counter('csv_manager/Results/website_results_log.csv')+1,
-                             operation, value1, value2, result]], 'website_results_log.csv')
+            # this method returns an array containing the [operation name, tuple of values, result]
+            # I did this just to connect the csv log to the History Class
+            h_data = History.get_info(-1)
+            # pylint: disable=line-too-long
+            FileWriter.log([[FileReader.line_counter('csv_manager/Results/website_results_log.csv')+1,
+                            h_data[0], h_data[1][0], h_data[1][1], h_data[2]]], 'website_results_log.csv')
+
+            # stores rows of data from csv log in a data_array (which is passed into result.html)
             data = FileReader.csv_in('csv_manager/Results/website_results_log.csv')
             data_array = []
             for data_set in data.itertuples():

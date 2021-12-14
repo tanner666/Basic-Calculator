@@ -30,6 +30,13 @@ def test_clear_history(clear_history_fixture, setup_addition_calculation_fixture
     assert History.clear_history() == True
 
 
+def test_get_info(clear_history_fixture, setup_addition_calculation_fixture):
+    """Testing get info method"""
+    # pylint: disable=unused-argument,redefined-outer-name
+    data = ['Division', (2.0, 1.0), History.get_last_calculation_value()]
+    assert History.get_info(-1) == data
+
+
 def test_count_history(clear_history_fixture, setup_addition_calculation_fixture):
     """Testing the count method of history"""
     # pylint: disable=unused-argument,redefined-outer-name
