@@ -1,6 +1,7 @@
 """Defines what the post and get method do"""
-from controller import ControllerBase
+# pylint: disable=no-name-in-module import-error
 from flask import render_template, request, flash
+from app.controllers.controller import ControllerBase
 from csv_manager.file_writer import FileWriter
 from csv_manager.file_reader import FileReader
 from calculator.calculator import Calculator

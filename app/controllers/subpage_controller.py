@@ -1,6 +1,7 @@
 """Get method for subpages"""
+# pylint: disable=no-name-in-module import-error
 from flask import render_template
-from controller import ControllerBase
+from app.controllers.controller import ControllerBase
 from csv_manager.file_reader import FileReader
 
 
