@@ -3,13 +3,15 @@ Homepage:
 <img width="946" alt="Screenshot 2021-12-13 213903" src="https://user-images.githubusercontent.com/90353188/145924030-e3575ab8-055f-46a3-ad94-4e895a917a6b.png">
 <img width="947" alt="Screenshot 2021-12-13 213933" src="https://user-images.githubusercontent.com/90353188/145924059-779dd13a-48a7-4ded-88d8-e95e635308be.png">
 
-Calculator Page:
+Default Calculator Page:
 <img width="960" alt="Screenshot 2021-12-13 214004" src="https://user-images.githubusercontent.com/90353188/145924106-ecb011fe-4eb3-4538-9f9c-b6909da7c0bb.png">
 
+Calculator Page with values:
+<img width="960" alt="Screenshot 2021-12-13 220410" src="https://user-images.githubusercontent.com/90353188/145925721-7dae3292-a02d-43b7-b9eb-be132406cfc5.png">
 
 Results Page:
-<img width="946" alt="Screenshot 2021-12-13 214102" src="https://user-images.githubusercontent.com/90353188/145924114-29bcab18-b5cb-4970-844f-d373b4e6bbf2.png">
-<img width="946" alt="Screenshot 2021-12-13 214135" src="https://user-images.githubusercontent.com/90353188/145924128-fbd4aab0-19f9-4182-9793-8b946da4eb68.png">
+<img width="946" alt="Screenshot 2021-12-13 220611" src="https://user-images.githubusercontent.com/90353188/145925949-033ccb69-39ca-437f-a411-b8648860175f.png">
+<img width="947" alt="Screenshot 2021-12-13 220633" src="https://user-images.githubusercontent.com/90353188/145926058-1817727e-3399-4866-a210-66841df9a467.png">
 
 No data entered error:
 <img width="946" alt="Screenshot 2021-12-13 214158" src="https://user-images.githubusercontent.com/90353188/145924138-89186f6b-c96b-4bc2-97c6-15628023fec0.png">
