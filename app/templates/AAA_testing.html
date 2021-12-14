@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block head %}
+    {{ super() }}
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAA Testing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+      .nounderline {
+          text-decoration: none !important;
+        }
+
+      .keyword {
+          color: #40413E;
+        }
+
+      kbd {
+          background-color: #D4D5D2;
+          color: black;
+        }
+                * {
+                  box-sizing: border-box;
+                }
+
+                .column {
+                  float: left;
+                  width: 33.33%;
+                  padding: 5px;
+                }
+
+                /* Clearfix (clear floats) */
+                .row::after {
+                  content: "";
+                  clear: both;
+                  display: table;
+                }
+
+  </style>
+
+  </head>
+{% endblock %}}
+{% block content %}
+  <body>
+    <!-- Showcase -->
+    <section class="bg-dark text-light p-4 text-center text-sm-start">
+      <div class="container">
+          <div class="d-sm-flex align-items-center justify-content-between">
+              <div>
+                  <h2>AAA Testing</h2>
+                </div>
+          </div>
+      </div>
+    </section>
+    <!-- Definition -->
+    <section class="text-sm-start">
+      <div class="container">
+        <div class="d-sm-flex align-items-md-center">
+          <h2 class="py-2"><strong>What is AAA Testing?</strong></h2>          
+        </div>
+        <div>
+          <p>
+            AAA stands for Arrange-Act-Assert. It refers to the pattern that test methods should follow. <br>
+            1.) Arrange inputs and operations. Setup any required objects, variables, data, or operations for the test to work.<br>
+            2.) Act on the target behavior. Run the thing that is to be tested (like a method).<br>
+            3.) Assert expected results. Write an assert statement that says "the result should be: " and verify it's the same as the actual answer. 
+          </p>
+        </div>
+        <div class="d-sm-flex align-items-md-center">
+          <h2 class="py-2"><strong>Why is Testing Important?</strong></h2>          
+        </div>
+        <div>
+          <p>
+           Testing is important to identify errors early on in the development of a program so that they don't become deeply rooted and hard to 
+           fix. The Unit Test is a commonly used during the development stages of a program and consists of writing test methods 
+           that will test all the different methods and functions of 
+           the program. AAA testing refers to the way that test methods should be structured.
+          </p>
+        </div>
+        <!-- Example -->
+        <div class="d-sm-flex align-items-md-center">
+          <h2 class="py-2"><strong>Example</strong></h2>          
+        </div>
+        <div>
+            <a href="https://raw.githubusercontent.com/tanner666/OOP/main/images/Screenshot%202021-11-12%20204756.png">
+                <img src="https://raw.githubusercontent.com/tanner666/OOP/main/images/Screenshot%202021-11-12%20204756.png" alt="W3Schools.com" width="450" height="">
+            </a>
+            <div class="d-sm-flex align-items-md-center">
+              <h4 class="py-2"><strong>The image demonstrates a simple example of AAA testing.</strong></h4>          
+            </div>
+            <p>
+                The function func takes a parameter named value, adds 1 to it, 
+                and returns the new value. The function func_test tests the func function by: <br>
+                1.) Arranging a variable, value = 1, that will need to be passed into func <br>
+                2.) Acting on the function by calling func(value)<br>
+                3.) Asserting that the result is the expected value of 2 (from 1 + 1) <br><br>
+                The second test function: test_func_combined shows a more concise version of AAA testing, by combining all 3 steps into
+                 one line. <br><br><br>
+
+            </p>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+  </body>
+{% endblock %}

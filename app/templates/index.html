@@ -48,7 +48,7 @@
             <p>
                 This website was created for a project in my IS-218 class. It features a calculator, a results page, a results log page,
                 and some extra information I found valuable while developing this project, including, object-oriented programming principles and terms,
-                AAA testing, and some pylint tips.
+                AAA testing, SOLID principles, and some pylint tips.
                 The main feature is the calculator page, which takes
                 input values from an html form, runs them through my python calculator program, stores the results in csv file,
                 and finally displays the contents of the csv file in an html table.
@@ -57,6 +57,34 @@
                 <a href="https://github.com/tanner666/calc_ex/tree/project_3" target="_blank" class="nounderline">link</a>
                 to my github repo.
             </p>
+        </div>
+        <div>
+            <h2 class="py-2"><strong>Project Overview</strong></h2>
+        </div>
+        <div>
+            <p>
+                This project was built entirely in Pycharm, running inside of a Docker Container. I started out by
+                 creating a calculator. There's more description on how the code works below, but
+                essentially the calculator can take a tuple of values and perform either addition, subtraction, multiplication, or division
+                on the values. The calculation object is then stored in a history array. The next step was to be able to log the calculations in a csv file and
+                also access the contents of the csv file.
+                To do this, I created a file reader class, which takes a csv file and converts it to a dataframe, and a file writer class, which contains a method to append the data from an
+                array in a csv file. <br><br>
+                The next step was setting up the webpage. I had to adapt code that my
+                professor provided for a basic webpage, to include my calculator. The main website code consists of html forms,
+                including a base template used to set up all the html forms, an app.py file, which uses Flask to connect and display
+                the various html forms, some controller.py files, which define the POST and GET methods used by app.py, and the addition of
+                nginx and Flask to the DockerFiles (which allows the program to run on localhost).
+                The calculator and csv log are connected to the website in the calculator_controller.py file. How it works is the calculator_controller's
+                post method takes data inputted into the calculator.html page and passes it to the calculator. The calculation info
+                (stored in the history array) is then copied into the csv log file. The content of the csv log file is then passed
+                into the result.html form as an array, which then gets displayed as a table on the webpage.
+                <br><br>
+                After the project code was completed, I then ran the Docker Container on Azure Cloud, so that anyone with the
+                link can access my website. Each stage of the development process is also backed up in my GitHub repository
+                (link above).
+                <br>
+              </p>
         </div>
         <div>
             <h2 class="py-2"><strong>Python Calculator Program Overview</strong></h2>

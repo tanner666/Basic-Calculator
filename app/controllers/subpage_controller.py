@@ -20,6 +20,10 @@ class SubpageController(ControllerBase):
         return render_template('tips_and_tricks.html')
 
     @staticmethod
+    def get_aaa_testing():
+        return render_template('AAA_testing.html')
+
+    @staticmethod
     def get_results():
         data = FileReader.csv_in('csv_manager/Results/website_results_log.csv')
         data_array = []

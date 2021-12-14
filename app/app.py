@@ -32,6 +32,10 @@ def solid_get():
 def tips_get():
     return SubpageController.get_tips_and_tricks()
 
+@app.route("/subpage4", methods=['GET'])
+def aaa_get():
+    return SubpageController.get_aaa_testing()
+
 @app.route("/results", methods=['GET'])
 def results_get():
     return SubpageController.get_results()
