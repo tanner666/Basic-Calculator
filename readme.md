@@ -37,4 +37,15 @@ The last four pages are from Project2 and are rather long, so I only took one sc
 <img width="960" alt="Screenshot 2021-12-13 214411" src="https://user-images.githubusercontent.com/90353188/145924186-cc69072c-e30b-4c88-a7c1-a176ec0543df.png">
 <img width="960" alt="Screenshot 2021-12-13 214429" src="https://user-images.githubusercontent.com/90353188/145924194-2d880fda-0763-4045-b6bb-cd4bf7eec721.png">
 
+Pytest:                                                                                                                                                        
+<img width="624" alt="Screenshot 2021-12-13 221122" src="https://user-images.githubusercontent.com/90353188/145927425-d9f27f02-9656-4228-93bd-8430f5c7d9d0.png">
+
+Pylint:                                                                                                                                                               
+<img width="614" alt="Screenshot 2021-12-13 222139" src="https://user-images.githubusercontent.com/90353188/145927431-a985e861-96d4-4c52-ba3a-7929c2d4cf7d.png">
+<img width="621" alt="Screenshot 2021-12-13 222221" src="https://user-images.githubusercontent.com/90353188/145927442-4ac79325-ac17-40e7-b47f-6c9fd60ab5e6.png">
+<img width="620" alt="Screenshot 2021-12-13 222244" src="https://user-images.githubusercontent.com/90353188/145927454-4c0425ed-7106-4025-a7f2-dd4f6e5a26d7.png">
+
+
+
+
 
