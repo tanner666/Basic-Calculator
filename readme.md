@@ -1,4 +1,5 @@
 # My Calculator Program- Project 3
+(Pylint and Pytest at bottom)
 Video overview of website:
 https://user-images.githubusercontent.com/90353188/146105029-eb4d1b12-a2c0-4278-aa0f-964df27b1da6.mp4
 
@@ -44,9 +45,9 @@ Pytest:
 <img width="624" alt="Screenshot 2021-12-13 221122" src="https://user-images.githubusercontent.com/90353188/145927425-d9f27f02-9656-4228-93bd-8430f5c7d9d0.png">
 
 Pylint:                                                                                                                                                               
-<img width="614" alt="Screenshot 2021-12-13 222139" src="https://user-images.githubusercontent.com/90353188/145927431-a985e861-96d4-4c52-ba3a-7929c2d4cf7d.png">
-<img width="621" alt="Screenshot 2021-12-13 222221" src="https://user-images.githubusercontent.com/90353188/145927442-4ac79325-ac17-40e7-b47f-6c9fd60ab5e6.png">
-<img width="620" alt="Screenshot 2021-12-13 222244" src="https://user-images.githubusercontent.com/90353188/145927454-4c0425ed-7106-4025-a7f2-dd4f6e5a26d7.png">
+<img width="614" alt="Screenshot 2021-12-14 221010" src="https://user-images.githubusercontent.com/90353188/146116170-c6886ea5-0d73-4e71-af12-97d963e89400.png">
+<img width="623" alt="Screenshot 2021-12-14 221034" src="https://user-images.githubusercontent.com/90353188/146116175-84b2e4a3-fe28-42f9-a173-1ea4d417f50d.png">
+
 
 
 
