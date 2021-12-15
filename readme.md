@@ -2,6 +2,9 @@
 (Pylint and Pytest at bottom)
 Video overview of website:
 https://user-images.githubusercontent.com/90353188/146105029-eb4d1b12-a2c0-4278-aa0f-964df27b1da6.mp4
+                                                                                                                                                               
+Video of more calculations (to validate the calculator works)                                                                                                    
+https://user-images.githubusercontent.com/90353188/146208889-e97dfd77-4535-4e8f-827e-8deb60500913.mp4
 
 Homepage:
 <img width="946" alt="Screenshot 2021-12-13 213903" src="https://user-images.githubusercontent.com/90353188/145924030-e3575ab8-055f-46a3-ad94-4e895a917a6b.png">
